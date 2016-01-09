@@ -14,7 +14,7 @@ function hashpass($pass, $salt = "") {
     $hashed = password_hash($pass, PASSWORD_BCRYPT, $opts);
     return $hashed;
 }
-$dbhost = getenv("DB_HOST");
+$dbhost = getenv("MYSQL_PORT_3306_TCP_ADDR");
 $dbuser = getenv("DB_USER");
 if (!$dbuser) {
     $dbuser = getenv("MYSQL_ENV_MYSQL_USER");
