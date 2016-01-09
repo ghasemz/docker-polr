@@ -92,7 +92,7 @@ if (strstr($err, "already exists")) {
 
 $mysqli->query('
 CREATE TABLE `redirinfo` (
-   `rurl` varchar(80) NOT NULL,
+   `rurl` varchar(250) NOT NULL,
    `rid` smallint(200) NOT NULL AUTO_INCREMENT,
    `baseval` varchar(30) NOT NULL,
    `ip` varchar(90) NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `redirinfo` (
  );');
  $mysqli->query('
  CREATE TABLE `redirinfo-temp` (
-   `rurl` varchar(80) NOT NULL,
+   `rurl` varchar(250) NOT NULL,
    `rid` smallint(200) NOT NULL AUTO_INCREMENT,
    `baseval` varchar(30) NOT NULL,
    `ip` varchar(90) NOT NULL,
